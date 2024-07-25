@@ -22,8 +22,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            position: relative; /* Добавляем относительное позиционирование для размещения кнопок */
-            overflow: hidden; /* Прячем части кнопок, которые могут выходить за границы контейнера */
+            position: relative;
+            overflow: hidden;
         }
         .header {
             background-color: #3498db;
@@ -31,7 +31,7 @@
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 20px;
-            animation: bounceInDown 1s ease-out; /* Анимация приветствия клиента */
+            animation: bounceInDown 1s ease-out;
         }
         .pricing {
             display: flex;
@@ -60,11 +60,11 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s; /* Добавляем плавные изменения цвета при наведении */
-            position: relative; /* Относительное позиционирование для декоративных элементов */
-            overflow: hidden; /* Прячем части элемента, которые могут выходить за границы */
-            z-index: 1; /* Устанавливаем z-index, чтобы кнопка была над остальным контентом */
-            cursor: pointer; /* Делаем курсор при наведении указывающим */
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            cursor: pointer;
         }
         .pricing a:hover {
             background-color: #16a085;
@@ -75,74 +75,77 @@
             color: #666;
         }
 
-        /* Стили для кнопки funpay */
-        .funpay-btn {
+        .funpay-btn, .funpay2-btn {
             position: absolute;
-            top: 20px; /* Располагаем кнопку вверху с отступом 20px от верхнего края */
-            right: 20px; /* Располагаем кнопку вправо с отступом 20px от правого края */
-            z-index: 1000; /* Устанавливаем z-index, чтобы кнопка была над остальным контентом */
-            width: 50px; /* Устанавливаем ширину кнопки */
-            height: 50px; /* Устанавливаем высоту кнопки */
-            background-image: url('funpay.png'); /* Задаем фон кнопки изображением funpay.png */
-            background-size: cover; /* Масштабируем изображение на всю кнопку */
-            border-radius: 50%; /* Делаем кнопку круглой */
-            cursor: pointer; /* Делаем курсор при наведении указывающим */
-            box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Добавляем тень кнопке */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Добавляем плавные изменения при наведении */
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
-        /* Стили для кнопки YT */
+        .funpay-btn {
+            top: 20px;
+            right: 20px;
+            background-image: url('funpay.png');
+        }
+
+        .funpay2-btn {
+            top: 20px;
+            left: 20px;
+            background-image: url('funpay2.png'); /* Замените на правильное изображение для второй кнопки */
+        }
+
         .yt-btn {
             position: absolute;
-            top: 90px; /* Располагаем кнопку ниже funpay с отступом 20px */
-            right: 20px; /* Располагаем кнопку вправо с отступом 20px от правого края */
-            z-index: 1000; /* Устанавливаем z-index, чтобы кнопка была над остальным контентом */
-            width: 50px; /* Устанавливаем ширину кнопки */
-            height: 50px; /* Устанавливаем высоту кнопки */
-            background-image: url('yt.png'); /* Задаем фон кнопки изображением yt.png */
-            background-size: cover; /* Масштабируем изображение на всю кнопку */
-            border-radius: 50%; /* Делаем кнопку круглой */
-            cursor: pointer; /* Делаем курсор при наведении указывающим */
-            box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Добавляем тень кнопке */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Добавляем плавные изменения при наведении */
+            top: 90px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            background-image: url('yt.png');
+            background-size: cover;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
-        /* Стили для красивых элементов */
         .decoration {
             position: absolute;
-            top: -20px; /* Располагаем элемент немного выше верхнего края */
-            left: -20px; /* Располагаем элемент немного левее левого края */
-            width: 100px; /* Устанавливаем ширину элемента */
-            height: 100px; /* Устанавливаем высоту элемента */
-            background-color: rgba(255, 255, 255, 0.1); /* Цвет элемента с прозрачностью */
-            border-radius: 50%; /* Делаем элемент круглым */
-            z-index: 900; /* Устанавливаем z-index, чтобы элемент был ниже кнопок */
-            pointer-events: none; /* Делаем элемент непрозрачным для событий */
-            transform: scale(0); /* Начальное состояние - элемент невидим */
-            transition: transform 0.3s ease-in-out; /* Плавное изменение */
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 900;
+            pointer-events: none;
+            transform: scale(0);
+            transition: transform 0.3s ease-in-out;
         }
 
-        /* Стили для анимации при наведении на контейнер */
         .container:hover .decoration {
-            transform: scale(4); /* Увеличиваем элемент при наведении */
+            transform: scale(4);
         }
 
-        /* Анимация для "письмо текста" */
         .text-animation {
-            overflow: hidden; /* Скрываем все, что не помещается в область текста */
-            white-space: nowrap; /* Запрещаем переносы строк */
-            animation: typing 3s steps(40, end); /* Анимация письма текста */
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end);
         }
 
-        /* Дополнительные анимации текста */
         .header, .header h1, .header p, .pricing h2, .pricing p {
-            opacity: 0; /* Начальная прозрачность */
-            animation: fadeInUp 1s forwards; /* Анимация появления текста */
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
         }
 
         @keyframes typing {
-            from { width: 0; } /* Начальная ширина - нулевая */
-            to { width: 100%; } /* Конечная ширина - 100% */
+            from { width: 0; }
+            to { width: 100%; }
         }
 
         @keyframes fadeInUp {
@@ -185,12 +188,12 @@
         <div>
             <h2 class="text-animation">Подписка на 1 месяц</h2>
             <p class="text-animation">Стоимость: 50 рублей</p>
-            <a href="#" style="background-color: #3498db;">Купить сейчас</a>
+            <a href="https://funpay.com/users/8577948/" style="background-color: #3498db;">Купить сейчас</a>
         </div>
         <div>
             <h2 class="text-animation">Подписка на 1 год</h2>
             <p class="text-animation">Стоимость: 150 рублей</p>
-            <a href="#" style="background-color: #2ecc71;">Купить сейчас</a>
+            <a href="https://funpay.com/users/8577948/" style="background-color: #2ecc71;">Купить сейчас</a>
         </div>
     </div>
 
@@ -201,6 +204,9 @@
     <!-- HTML для кнопки funpay -->
     <a href="https://funpay.com/users/8577948/" class="funpay-btn" title="Оплатить через FunPay"></a>
 
+    <!-- HTML для кнопки funpay2 -->
+    <a href="https://funpay.com/users/3254719/" class="funpay2-btn" title="Другой профиль FunPay"></a>
+
     <!-- HTML для кнопки YT -->
     <a href="https://www.youtube.com/channel/UCmSHa8sDDzHEvALzfTHMihg" class="yt-btn" title="YouTube канал"></a>
 
@@ -209,7 +215,6 @@
 </div>
 
 <script>
-    // JavaScript для запуска анимации письма текста после загрузки страницы
     document.addEventListener('DOMContentLoaded', function() {
         const textElements = document.querySelectorAll('.text-animation');
         textElements.forEach(element => {
