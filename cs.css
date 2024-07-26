@@ -2,7 +2,7 @@
 .pricing a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1abc9c;
+    background-color: #003366; /* Тёмно-синий цвет фона */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -14,7 +14,7 @@
 }
 
 .pricing a:hover {
-    background-color: #16a085;
+    background-color: #002244; /* Более тёмный синий цвет при наведении */
     transform: scale(1.1); /* Увеличиваем размер кнопки на 10% */
 }
 
@@ -36,6 +36,7 @@
 
 .funpay-btn:hover {
     transform: scale(1.2); /* Увеличиваем размер кнопки на 20% */
+    box-shadow: 0 0 15px rgba(0,0,0,0.3); /* Увеличиваем тень при наведении */
 }
 
 /* Стили для кнопки YouTube */
@@ -56,4 +57,5 @@
 
 .yt-btn:hover {
     transform: scale(1.2); /* Увеличиваем размер кнопки на 20% */
+    box-shadow: 0 0 15px rgba(0,0,0,0.3); /* Увеличиваем тень при наведении */
 }
